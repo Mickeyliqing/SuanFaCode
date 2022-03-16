@@ -1,11 +1,15 @@
 package TreeNode;
 
-public class ZuiXiaoKTreeNode {
+/**
+ * 在二叉搜索树中寻找第 K 小的元素
+ */
+public class MinKTreeNode {
 
     /**
      * 题目的意思是：在二叉搜索树中寻找第 K 小的元素。
      * 这个时候就要从二叉搜索树的性质下手了。
      * 只知道二叉搜索树中序遍历是一个升序的数组，但具体到本题代码如何设计就不知道了
+     * @param root
      */
     public void zuiXiao01(TreeNode root) {
         zuiXiao01(root.left);
@@ -15,6 +19,8 @@ public class ZuiXiaoKTreeNode {
 
     /**
      * 确定本地使用中序遍历，那么具体的处理代码就应该在中序遍历的位置
+     * @param root
+     * @param k
      */
     public void zuiXiao02(TreeNode root, int k) {
         int m = 0;

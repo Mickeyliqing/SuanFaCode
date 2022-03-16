@@ -2,13 +2,25 @@ package PaiXu;
 
 import java.util.Arrays;
 
+/**
+ * 冒泡排序
+ */
 public class MaoPaoPaiXu {
+    /**
+     * 测试方法
+     * @param args
+     */
     public static void main(String[] args) {
         MaoPaoPaiXu maoPaoPaiXu = new MaoPaoPaiXu();
         int[] array = {9,8,6,7,3,1,2};
         System.out.println(Arrays.toString(maoPaoPaiXu.maoPao01(array)));
     }
 
+    /**
+     * 对应的方法
+     * @param arr
+     * @return
+     */
     public int[] maoPao01(int[] arr) {
         // 认真思考会发现，如果元素有五个，那么其实排序的次数应该是4次。
         // 因此 i < arr.length-1。

@@ -2,6 +2,9 @@ package TreeNode;
 
 import java.util.LinkedList;
 
+/**
+ * 给定一颗二叉树，把它序列化成一个数组
+ */
 public class XuLieHuaTreeNode {
 
     /**
@@ -16,7 +19,11 @@ public class XuLieHuaTreeNode {
     String SEP = ",";
     String NULL = "#";
 
-    // 前序遍历方式序列化二叉树
+    /**
+     * 前序遍历方式序列化二叉树
+     * @param root
+     * @return
+     */
     public String xuLieHua(TreeNode root) {
         // 同样的思路可以借助辅助函数
         StringBuilder str = new StringBuilder();
@@ -24,7 +31,11 @@ public class XuLieHuaTreeNode {
         return str.toString();
     }
 
-    // 定义辅助函数
+    /**
+     * 定义辅助函数
+     * @param root
+     * @param str
+     */
     public void xuLieHua(TreeNode root, StringBuilder str) {
         if (root == null) {
             str.append(NULL).append(SEP);
@@ -39,6 +50,8 @@ public class XuLieHuaTreeNode {
 
     /**
      * 把上面的数组，反序列化成二叉树
+     * @param data
+     * @return
      */
     public TreeNode fanXuLieHua(String data) {
         LinkedList<String> nodes = new LinkedList<>();
@@ -49,6 +62,11 @@ public class XuLieHuaTreeNode {
         return fanXuLieHua(nodes);
     }
 
+    /**
+     * 定义辅助函数
+     * @param nodes
+     * @return
+     */
     public TreeNode fanXuLieHua(LinkedList<String> nodes) {
         if (nodes.isEmpty()) {
             return null;

@@ -1,5 +1,8 @@
 package TreeNode;
 
+/**
+ * 二叉搜索树转化成累加树
+ */
 public class LeiJiaTreeNode {
 
     /**
@@ -9,6 +12,8 @@ public class LeiJiaTreeNode {
      * 在思考新的二叉树各个节点的关系：最大的那个节点的数据还是它自己，次一级的那个节点的数据是最大元素和它自己本身元素之和。
      * 如果把原来的二叉搜索树降序输出，然后各个节点的数据累加，在把累加的和赋值给原来的二叉树。问题是不是就解决了。
      * 这样既没有破坏原来二叉搜索树的结构，又满足了题目要求的条件。
+     * @param root
+     * @return
      */
     public TreeNode leiJia01(TreeNode root) {
         int sum = 0;

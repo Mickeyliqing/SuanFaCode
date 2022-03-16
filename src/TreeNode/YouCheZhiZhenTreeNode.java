@@ -1,8 +1,16 @@
 package TreeNode;
 
-public class YouZhiZhenTreeNode {
+/**
+ * 填充二叉树的右侧指针
+ */
+public class YouCheZhiZhenTreeNode {
 
-    // 这个方法存在一个问题，那就是不同父节点的两个节点无法相连起来
+    /**
+     * 填充二叉树的右侧指针
+     * 这个方法存在一个问题，那就是不同父节点的两个节点无法相连起来
+     * @param root
+     * @return
+     */
     public TreeNode youZhiZhen01(TreeNode root) {
         if (root == null || root.left == null) {
             return null;
@@ -14,7 +22,12 @@ public class YouZhiZhenTreeNode {
         return root;
     }
 
-    // 转化思路：将每相邻的两个节点连接起来，那么可以借助一个辅助函数完成这件事
+    /**
+     * 优化后的方法
+     * 转化思路：将每相邻的两个节点连接起来，那么可以借助一个辅助函数完成这件事
+     * @param root
+     * @return
+     */
     public TreeNode youZhiZhen02(TreeNode root) {
         if (root == null){
             return null;
@@ -23,6 +36,11 @@ public class YouZhiZhenTreeNode {
         return root;
     }
 
+    /**
+     * 辅助函数
+     * @param root1
+     * @param root2
+     */
     public void connectTwo(TreeNode root1, TreeNode root2) {
         if (root1 == null || root2 == null) {
             return;

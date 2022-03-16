@@ -2,8 +2,15 @@ package PaiXu;
 
 import java.util.Arrays;
 
+/**
+ * 快速排序
+ */
 public class KuaiShuPaiXu {
 
+    /**
+     * 测试方法
+     * @param args
+     */
     public static void main(String[] args) {
         KuaiShuPaiXu kuaiShuPaiXu = new KuaiShuPaiXu();
         int[] array = {9,5,8,2,6,3,1};
@@ -11,6 +18,12 @@ public class KuaiShuPaiXu {
         System.out.println(Arrays.toString(array));
     }
 
+    /**
+     * 常规方法
+     * @param arr
+     * @param k
+     * @param m
+     */
     public void querSort01(int[] arr,int k, int m) {
         int left = 0;
         int right = arr.length-1;
@@ -31,6 +44,12 @@ public class KuaiShuPaiXu {
         }
     }
 
+    /**
+     * 递归方法
+     * @param arr
+     * @param left
+     * @param right
+     */
     public void querSort02(int arr[], int left, int right) {
         // 使用递归，就要有递归结束的条件
         if (left >= right) {

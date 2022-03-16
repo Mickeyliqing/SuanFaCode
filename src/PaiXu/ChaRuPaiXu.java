@@ -2,13 +2,25 @@ package PaiXu;
 
 import java.util.Arrays;
 
+/**
+ * 插入排序
+ */
 public class ChaRuPaiXu {
+    /**
+     * 测试方法
+     * @param args
+     */
     public static void main(String[] args) {
         ChaRuPaiXu chaRuPaiXu = new ChaRuPaiXu();
         int array[] = {8,9,3,5,6,2,1};
         System.out.println(Arrays.toString(chaRuPaiXu.inSort01(array)));
     }
 
+    /**
+     * 一般方法，存在不足
+     * @param arr
+     * @return
+     */
     public int[] inSort01(int[] arr) {
         // 因为第一个元素默认有序，所以这里从第二个位置开始
         for (int i = 1; i < arr.length; i++) {
@@ -22,6 +34,11 @@ public class ChaRuPaiXu {
         return arr;
     }
 
+    /**
+     * 修改后的方法
+     * @param arr
+     * @return
+     */
     public int[] inSort02 (int[] arr) {
         // 因为第一个元素默认有序，所以这里从第二个位置开始
         for (int i = 1; i < arr.length; i++) {

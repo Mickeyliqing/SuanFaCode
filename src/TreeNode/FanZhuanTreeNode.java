@@ -1,7 +1,15 @@
 package TreeNode;
 
+/**
+ * 反转一棵二叉树
+ */
 public class FanZhuanTreeNode {
 
+    /**
+     * 反转一颗二叉树
+     * @param root
+     * @return
+     */
     public TreeNode fanZhuan(TreeNode root) {
         if(root == null) {
             return null;

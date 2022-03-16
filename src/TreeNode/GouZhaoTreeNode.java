@@ -1,5 +1,8 @@
 package TreeNode;
 
+/**
+ * 根据前序遍历的结果和中序遍历的结果构造二叉树
+ */
 public class GouZhaoTreeNode {
 
     /**
@@ -10,12 +13,26 @@ public class GouZhaoTreeNode {
      * 根据上面的分析，可以发现，使用递归实现较为方便
      */
 
-    // 同样的思路，先把伪代码写出来
+    /**
+     * 同样的思路，先把伪代码写出来
+     * @param a
+     * @param b
+     * @return
+     */
     public TreeNode gouTreeNode01(int[] a, int[] b) {
         return builder(a, 0, a.length-1, b, 0, b.length-1);
     }
 
-    // 采用构造子函数的方式
+    /**
+     * 采用构造子函数的方式
+     * @param a
+     * @param m
+     * @param n
+     * @param b
+     * @param k
+     * @param h
+     * @return
+     */
     public TreeNode builder(int[] a, int m, int n, int[] b, int k, int h) {
         if(m > n) {
             return null;
